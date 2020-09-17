@@ -1,5 +1,4 @@
-
 provider "google" {
-  credentials = file(var.credentials_file_path)
-  project = var.projectid
+  credentials = file("~/.ssh/test-bench-2020082-57e40899bf18.json")
+  project =  "test-bench-2020082"
 }

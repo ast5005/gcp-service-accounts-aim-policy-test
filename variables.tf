@@ -1,6 +1,6 @@
 variable "credentials_file_path" {
   default = ""
 }
-variable "projectid" {
+variable "project_id" {
   default = ""
 }
