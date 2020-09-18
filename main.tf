@@ -13,7 +13,7 @@ locals{
   roles_dic = {
     role1 = "roles/iam.serviceAccountUser"
     role2 = "roles/iam.serviceAccountTokenCreator"
-    role3 = "roles/iam.serviceAccountUser"
+    role3 = "roles/iam.serviceAccountKeyAdmin"
   }
 }
 
