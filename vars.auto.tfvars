@@ -1,2 +1,2 @@
-project_id = "test-bench-2020082"
-credentials_file_path = "~/.ssh/test-bench-2020082-57e40899bf18.json"
+project_id = "iam-test-289920"
+credentials_file_path = "~/.ssh/iam-test-289920-fb6a01fa1105.json"

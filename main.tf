@@ -20,39 +20,39 @@ locals{
 module "test-sa-iam-policy" {
   //source = "github.com/InfraManAI/gcp-iam-modules.git//gcp-service-account-iam-policy"
   source = "../gcp-iam-modules/gcp-project-iam"
-  policy_set_policy = {
+  projectid = var.project_id
+  policy_set_policy = {}
+
+  policy_set_member = {
     p1 = {
-      roles_policy = [
-        "roles/owner",
-        "roles/viewer",
-        "roles/editor"
+      members = [
+        "serviceAccount:sa-terraform@iam-test-289920.iam.gserviceaccount.com"
       ]
-      members_policy = [
-        "user:abdullahtazebay@gmail.com"
+      roles = [
+      "roles/owner",
+      "roles/viewer",
+      "roles/editor"
       ]
-      service_accounts_policy = [
-        "test-sa-1t"
+      service_accounts = [
+      "test-sa-1t"
       ]
-      desc_policy = "Project IAM Policy Test - 1"
-    }
-
-    p2 = {
-      roles_policy = [
-        "roles/owner",
-        "roles/viewer",
-        "roles/editor"
-      ]
-      members_policy = [
-        "user:orhanevranos@gmail.com"
-      ]
-      service_accounts_policy = [
-        "test-sa-2t"
-      ]
-      desc_policy = "Project IAM Policy Test - 2"
-    }
-
+      desc = "Project IAM Policy Test - 1"
   }
 
+    p2 = {
+      members = [
+        "user:orhanevranos@gmail.com"
+      ]
+      roles = [
+        "roles/viewer",
+        "roles/editor"
+      ]
+      service_accounts = [
+        "test-sa-2t"
+      ]
+      desc = "Project IAM Policy Test - 2"
+    }
+  }
 }
 
 
